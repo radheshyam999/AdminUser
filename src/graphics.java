@@ -4,6 +4,7 @@ import java.awt.Label;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class graphics extends Frame implements ActionListener{
 
@@ -15,7 +16,7 @@ public class graphics extends Frame implements ActionListener{
 @SuppressWarnings("deprecation")
 public graphics() 
  { 
-	Label l1,l2,l3,l4;
+	Label l1,l2,l3,l4;  /// defined Lable here 
 	
 	l1 = new Label("Name:)");
 	l2 = new Label("UserName:)");
@@ -55,10 +56,23 @@ public graphics()
 
       @Override
      public void actionPerformed(ActionEvent e)
-      {
-    	  
-    	textfieldName.getLocation(); 
-    	  
+      {  String Name,Email,UserName,Password;
+        EncLearn  Acess = new EncLearn();
+    	Name=textfieldName.getText().toString();
+    	Email=textfieldEmail.getText().toString();
+    	UserName=textfieldUserName.getText().toString();
+    	Password =textfieldPassword.getText().toString();
+    	
+    	Acess.setName(Name);
+    	Acess.setEmail(Email);
+    	Acess.setUserName(UserName);    	
+    	Acess.setPassword(Password); 
+    try {
+		new ACtionStart (Acess);
+	} catch (IOException e1) {
+		
+		e1.printStackTrace();
+	}
 	  }
 	
  }
