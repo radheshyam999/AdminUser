@@ -6,7 +6,14 @@ import java.awt.TextField;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.google.gson.Gson;
+import com.sun.tools.javac.comp.Todo;
 
 public class graphics extends Frame implements ActionListener{
 
@@ -218,7 +225,28 @@ public graphics()
       }
 	  
    
-   
+    /***
+     *   i have to learn  prasing json to String
+     *   
+     *   
+     *   
+     */
       
-      
+//      boolean CheckAccountAvalible() {
+//  		BufferedReader Bf;
+//  		 Gson gson = new Gson();
+//  		 try
+//  		 {
+//  			Bf =new BufferedReader(new FileReader("C:\\\\Users\\\\ADMIN\\\\Desktop\\\\Day\\\\Data\\\\Admin.json"));
+//  			graphics resultData = gson.fromJson(Bf, graphics.class);
+//  			for(Todo d:resultData.getTodos());
+//  			
+//  		 }catch(Exception e) {
+//  			 
+//  		 }
+  		
+  		
+  		
+  		//return true;	
+  	//}    
  }
